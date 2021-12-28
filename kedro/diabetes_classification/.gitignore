@@ -14,7 +14,7 @@ data/**
 logs/**
 
 # except their sub-folders
-!data/**/
+!data/01_raw/
 !logs/**/
 
 # also keep all .gitkeep files
