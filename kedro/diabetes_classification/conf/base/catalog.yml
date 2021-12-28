@@ -6,3 +6,7 @@
 diabetes_data:
   type: pandas.CSVDataSet
   filepath: data/01_raw/diab.csv
+
+diabetes_data_without_null:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/diab_without_null.csv
