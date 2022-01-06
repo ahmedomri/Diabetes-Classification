@@ -10,3 +10,11 @@ diabetes_data:
 diabetes_data_without_null:
   type: pandas.CSVDataSet
   filepath: data/02_intermediate/diab_without_null.csv
+
+X:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/X.csv
+
+Y:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/Y.csv
