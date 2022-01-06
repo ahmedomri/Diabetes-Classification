@@ -1,7 +1,7 @@
 from kedro.pipeline import Pipeline, node
 from .nodes.replace_null_values import replace_null_values
 from .nodes.scaling_data import get_outcome, scaling_data
-
+from .nodes.Test_Train_Split import split_train_test
 
 def create_pipeline(**kwargs):
     return Pipeline(
@@ -23,6 +23,12 @@ def create_pipeline(**kwargs):
                 inputs=['diabetes_data_without_null'],
                 outputs='X',
                 name='scaling_data_node'
+            ),
+            node(
+                func=split_train_test,
+                inputs=['X', 'Y', "params:test_size", "params:random_state"],
+                outputs=['X_train', 'X_test', 'y_train', 'y_test'],
+                name='split_train_test_node'
             ),
         ]
     )

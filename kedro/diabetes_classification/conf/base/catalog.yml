@@ -18,3 +18,19 @@ X:
 Y:
   type: pandas.CSVDataSet
   filepath: data/02_intermediate/Y.csv
+
+X_train:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/X_train.csv
+
+X_test:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/X_test.csv
+
+y_train:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/y_train.csv
+
+y_test:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/y_test.csv
