@@ -1,7 +1,7 @@
 from kedro.pipeline import Pipeline, node
 from .nodes.replace_null_values import replace_null_values
 from .nodes.scaling_data import get_outcome, scaling_data
-from .nodes.Test_Train_Split import split_train_test
+from .nodes.test_train_split import split_train_test
 
 def create_pipeline(**kwargs):
     return Pipeline(
