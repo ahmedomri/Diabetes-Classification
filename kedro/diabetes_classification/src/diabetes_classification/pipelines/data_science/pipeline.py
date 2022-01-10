@@ -3,6 +3,7 @@ from kedro.pipeline import Pipeline, node
 from .nodes.KNeighbors_classifier import k_neighbors_classifier
 from .nodes.predictions import predictions
 from .nodes.classification_report import classification_report
+from .nodes.hyper_parameter_optimization import params_optimization
 
 
 def create_pipeline(**kwargs):
@@ -23,8 +24,14 @@ def create_pipeline(**kwargs):
             node(
                 func=classification_report,
                 inputs=['y_test', 'Y_predict'],
-                outputs= None,
+                outputs=None,
                 name='classification_report'
+            ),
+            node(
+                func=params_optimization,
+                inputs=['X', 'Y', 'params:cv'],
+                outputs=None,
+                name='params_optimization'
             ),
         ]
     )
